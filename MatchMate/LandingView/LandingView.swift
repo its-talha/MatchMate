@@ -8,8 +8,8 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
-    @StateObject private var vm = ProfileViewModelWrapper()
+struct LandingView: View {
+    @StateObject private var vm = LandingProfileViewModelWrapper()
     
     var body: some View {
         NavigationView {
@@ -65,7 +65,3 @@ struct ContentView: View {
         }
     }
 }
-
-//#Preview {
-//    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//}

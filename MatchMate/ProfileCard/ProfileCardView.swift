@@ -8,7 +8,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ProfileCardView: View {
-    @ObservedObject var vm: ProfileViewModel
+    @ObservedObject var vm: ProfileCardViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

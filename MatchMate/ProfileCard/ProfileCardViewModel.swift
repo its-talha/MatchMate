@@ -15,7 +15,7 @@ enum MatchStatus: String {
     case declined
 }
 
-final class ProfileViewModel: ObservableObject, Identifiable {
+final class ProfileCardViewModel: ObservableObject, Identifiable {
     
     private let coreDataHelper: ProfileCoreDataHelping
     private let profileId: String

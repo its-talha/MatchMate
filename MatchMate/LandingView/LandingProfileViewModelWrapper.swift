@@ -9,8 +9,8 @@ import Foundation
 import CoreData
 import Combine
 
-final class ProfileViewModelWrapper: ObservableObject {
-    @Published var profiles: [ProfileViewModel] = []
+final class LandingProfileViewModelWrapper: ObservableObject {
+    @Published var profiles: [ProfileCardViewModel] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
 
@@ -23,7 +23,7 @@ final class ProfileViewModelWrapper: ObservableObject {
     
     func loadProfiles() {
         let fetchedProfiles = coreDataHelper.fetchAllProfiles()
-        profiles = fetchedProfiles.map { ProfileViewModel(profile: $0, coreDataHelper: coreDataHelper) }
+        profiles = fetchedProfiles.map { ProfileCardViewModel(profile: $0, coreDataHelper: coreDataHelper) }
     }
     
     func refreshFromNetwork() {
